@@ -25,6 +25,7 @@
   .container {
     width: 100%;
     max-width: 960px;
+    height: 100%;
     display: flex;
     margin: auto;
     flex-wrap: wrap;
