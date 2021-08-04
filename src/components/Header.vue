@@ -89,7 +89,4 @@
 .menu ul li:hover {
   background-color: #333;
 }
-
-
-
 </style>
