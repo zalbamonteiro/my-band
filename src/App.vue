@@ -1,16 +1,28 @@
 <template>
   <div id="app">
-    <Ciclo />
+    <Header />
+    <Banner/>
+    <Discografia />
+    <Citacao />
+    <Agenda />
   </div>
 </template>
 
 <script>
-  import Ciclo from "./components/Ciclo.vue";
+  import Header from "./components/Header.vue";
+  import Banner from "./components/Banner.vue";
+  import Discografia from "./components/Discografia.vue";
+  import Citacao from "./components/Citacao.vue";
+  import Agenda from "./components/Agenda.vue";
   
   export default {
     name: 'App',
     components : {
-      Ciclo
+      Header,
+      Banner,
+      Discografia,
+      Citacao,
+      Agenda
     }
   }
 </script>
@@ -36,7 +48,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    flex: 1;
     width: 100%;
   }
 
