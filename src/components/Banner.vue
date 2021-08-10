@@ -78,5 +78,29 @@
   .active {
     opacity: 1;
   }
+
+  .banner__content .row {
+    align-items: flex-end;
+  }
+
+  .banner__content p{
+    font-size : 20px;
+    margin-left : 70px;
+    line-height: 25px;
+  }
+
+  .banner__content button{
+    font-size : 20px;
+    margin-left : 70px;
+    width : 170px;
+    height: 40px;
+    background-color: #e2e2e2;
+    color: #212121;
+    border: none;
+    font-size: 18px;
+    font-weight: 900;
+    border-radius : 6px; 
+    margin-bottom : 54px;
+  }
   
 </style>

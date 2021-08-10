@@ -1,19 +1,16 @@
 <template>
   <div id="app">
-    <Header />
-    <Banner />
+    <Ciclo />
   </div>
 </template>
 
 <script>
-  import Header from "./components/Header.vue";
-  import Banner from "./components/Banner.vue";
+  import Ciclo from "./components/Ciclo.vue";
   
   export default {
     name: 'App',
     components : {
-      Header,
-      Banner
+      Ciclo
     }
   }
 </script>
@@ -37,7 +34,7 @@
   .row { 
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: center;
     flex: 1;
     width: 100%;
