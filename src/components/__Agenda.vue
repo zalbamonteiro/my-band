@@ -6,32 +6,32 @@
           <h2 class="agenda__title">Agenda</h2>
         </div>
         <div class="col-md-6">
-          <input type="text" v-model="search" placeholder="Pesquisar.." />
+          <input type="text" placeholder="Pesquisar ..." v-model="search" />
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4" v-for="event in eventsFiltered" :key="event.id">
-          <Card :title="event.title" :description="event.description" />
+        <div v-for="event in eventsFiltered" :key="event.id" class="col-md-4">
+          <Card :title="event.title" :description="event.description"/>
         </div>
       </div>
     </div>
   </section>
 </template>
 <script>
-  import Card from "./Card.vue";
+import Card from "./Card.vue";
 
 export default {
-  name : "Agenda",
+  name: "Agenda",
   components : {
     Card
   },
-  data : function() {
+  data : function(){
     return {
       search : "",
       events : [
         {
           id: 1,
-          title : "Show de 30 anos",
+          title : "Show 30 anos",
           description : `Lorem Ipsum is simply dummy text of the printing and 
                         typesetting industry. Lorem Ipsum has been the industry's standard 
                         dummy text ever since the 1500s, when an unknown printer took a galley 
@@ -39,7 +39,7 @@ export default {
         },
         {
           id: 2,
-          title : "Core e valores",
+          title : "cores e valores",
           description : `Lorem Ipsum is simply dummy text of the printing and 
                         typesetting industry. Lorem Ipsum has been the industry's standard 
                         dummy text ever since the 1500s, when an unknown printer took a galley 
@@ -47,7 +47,7 @@ export default {
         },
         {
           id: 3,
-          title : "Show de 30 anos",
+          title : "Show 30 anos",
           description : `Lorem Ipsum is simply dummy text of the printing and 
                         typesetting industry. Lorem Ipsum has been the industry's standard 
                         dummy text ever since the 1500s, when an unknown printer took a galley 
@@ -55,7 +55,7 @@ export default {
         },
         {
           id: 4,
-          title : "Show de 30 anos",
+          title : "cores e valores",
           description : `Lorem Ipsum is simply dummy text of the printing and 
                         typesetting industry. Lorem Ipsum has been the industry's standard 
                         dummy text ever since the 1500s, when an unknown printer took a galley 
@@ -63,7 +63,7 @@ export default {
         },
         {
           id: 5,
-          title : "Show de 30 anos",
+          title : "Show 30 anos",
           description : `Lorem Ipsum is simply dummy text of the printing and 
                         typesetting industry. Lorem Ipsum has been the industry's standard 
                         dummy text ever since the 1500s, when an unknown printer took a galley 
@@ -71,7 +71,7 @@ export default {
         },
         {
           id: 6,
-          title : "Show de 30 anos",
+          title : "cores e valores",
           description : `Lorem Ipsum is simply dummy text of the printing and 
                         typesetting industry. Lorem Ipsum has been the industry's standard 
                         dummy text ever since the 1500s, when an unknown printer took a galley 
@@ -82,11 +82,10 @@ export default {
   },
   computed: {
     eventsFiltered : function() {
-      return this.events.filter((event) =>
-        event.title.toLowerCase().indexOf(this.search.toLowerCase()) > -1 
-      )
+      return this.events.filter((event) => event.title.toLowerCase().indexOf(this.search) > -1 )
     }
   }
+
 }
 </script>
 <style>

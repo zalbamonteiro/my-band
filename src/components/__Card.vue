@@ -1,17 +1,17 @@
 <template>
   <div class="card">
-    <h2>{{ title }}</h2>
-    <p> {{ description }}</p>
-    <button>Detalhe</button>
+    <h2>{{title}}</h2>
+    <p>{{description}}</p>
+    <button>Detalhes</button>
   </div>
 </template>
 <script>
 export default {
-  name : "Card",
-  props : {
+  name: "Card",
+  props: {
     title : String,
-    description : String,
-  },
+    description: String
+  }
 }
 </script>
 <style>
@@ -44,4 +44,6 @@ export default {
     color: #FFFFFF;
     border: none;
   }
+  
+
 </style>
