@@ -8,7 +8,7 @@
       </div>
       <div class="row">
         <div 
-          v-for="myNew in news" 
+          v-for="myNew in newsFiltered" 
           :key="myNew.id" 
           :class="{'col-md-12' : myNew.id === 1 ,'col-md-6' : myNew.id !== 1}"
         >
@@ -19,7 +19,7 @@
             <router-link :to="{name: 'noticias-detalhe', params : { id : myNew.id}}"><span>Leia mais</span></router-link>
           </div>
         </div> 
-        <div class="col-md-12">
+        <div class="col-md-12" v-if="isButton">
           <router-link to="/noticias" class="news__btn"><button>Veja mais</button></router-link>
         </div>       
       </div>
@@ -28,7 +28,10 @@
 </template>
 <script>
 export default {
-  name: "NewsHome",
+  name: "NewsComponent",
+  props : {
+    isButton : Boolean
+  },
   data: function () {
     return {
       news: [
@@ -56,9 +59,36 @@ export default {
               when an unknown printer took a galley of type and scrambled it to make a type specimen book. `,
           img: require('../assets/news3.png')
         },
+        {
+          id : 4,
+          title: "Lorem Ipsum is",
+          text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+              when an unknown printer took a galley of type and scrambled it to make a type specimen book. `,
+          img: require('../assets/news2.png')
+        },
+        {
+          id : 5,
+          title: "Lorem Ipsum is",
+          text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+              when an unknown printer took a galley of type and scrambled it to make a type specimen book. `,
+          img: require('../assets/news3.png')
+        },
       ]
     }
-  }
+  },
+  computed : {
+    newsFiltered : function (){
+      const news = this.news;
+
+      if(this.isButton){
+        return news.slice(0,3);
+      }
+
+      return news
+    }
+  },
 }
 </script>
 <style>

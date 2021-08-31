@@ -2,7 +2,7 @@
   <div class="card">
     <h2>{{ title }}</h2>
     <p> {{ description }}</p>
-    <button>Detalhe</button>
+    <b-button variant="outline-danger">Detalhe</b-button>
   </div>
 </template>
 <script>
@@ -36,12 +36,4 @@ export default {
     color : #000000;
   }
 
-  .card button {
-    width: 170px;
-    height : 40px;
-    border-radius : 6px;
-    background-color : #C3121C;
-    color: #FFFFFF;
-    border: none;
-  }
 </style>
