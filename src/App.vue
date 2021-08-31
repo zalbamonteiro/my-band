@@ -20,7 +20,7 @@
 
   .container {
     width: 100%;
-    max-width: 960px;
+    max-width: 1200px;
     height: 100%;
     display: flex;
     margin: auto;
