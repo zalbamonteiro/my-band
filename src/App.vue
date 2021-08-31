@@ -18,6 +18,10 @@
     font-family: sans-serif
   }
 
+  .container{
+    display: flex;
+  }
+
   .row { 
     display: flex;
     flex-direction: row;
