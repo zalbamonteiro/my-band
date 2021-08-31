@@ -18,16 +18,4 @@
     font-family: sans-serif
   }
 
-  .container{
-    display: flex;
-  }
-
-  .row { 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-  }
-
 </style>

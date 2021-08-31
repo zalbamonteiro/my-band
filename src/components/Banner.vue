@@ -50,6 +50,10 @@
     overflow: hidden;
   }
 
+  .banner__content .row{
+    height: 700px;
+  }
+
   .banner__content{
     position: relative
   }
