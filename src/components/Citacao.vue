@@ -30,6 +30,7 @@ export default {
 
    .citacao .row{
      height: 255px;
+      align-items: center;
    }
 
   .citacao .citacao__text {
