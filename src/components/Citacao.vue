@@ -28,6 +28,10 @@ export default {
     height: 255px;
   }
 
+   .citacao .row{
+     height: 255px;
+   }
+
   .citacao .citacao__text {
     color: #C3121C;
     font-size : 24px;
